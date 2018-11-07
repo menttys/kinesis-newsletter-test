@@ -8,7 +8,7 @@
 	
 	<style type="text/css">
 		
-		@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+		/* SETTING FONT WITH FONT FACE */
 		/* latin */
 		@font-face {
 		  font-family: 'Roboto';
@@ -56,17 +56,23 @@
 		p { margin: 1em 0; }
 		h1, h2, h3, h4, h5, h6 { color: black !important; }
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: blue !important; }
-		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
-			color: red !important;
-		 }
 		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-			color: purple !important;
+			color: #ffd700 !important;
 		}
-		table td {border-collapse: collapse;}
-		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
-		a {color: orange;}
+		table td { border-collapse: collapse; }
+		table { 
+			border-collapse:collapse; 
+			mso-table-lspace:0pt; 
+			mso-table-rspace:0pt; 
+		}
+		a {
+				color: #ffd700;
+			}
+		a img {
+			cursor: pointer;
+		}	
 		
-		/* full body table */
+		/* FULL BODY TABLE USED INSTEAD BODY TAG */
 		.fullbody_table {
 			width: 100%; 
 			height: 100%; 
@@ -165,10 +171,10 @@
 								vertical-align: top;
 								width: 260px;
 							}
-
-
-
-		
+				.footer {
+					height: 198px;
+				}
+		/* spacing to avoid to use css margin*/
 		.spaces-15 {
 			height: 15px;
 		}
@@ -187,73 +193,6 @@
 			color: #1e1f26;
 		}
 		
-
-
-					.tb_footer {
-						margin: auto; 
-						width: 540px;
-						margin-top: 24px;
-						margin-bottom: 24px;
-					}
-						.tb_footer td {
-							width: 50%;
-						}
-							.footer_social img {
-								margin-right: 15px;
-							}	
-						.footer_logo {
-							margin: auto;
-						}
-							.footer_logo img {
-								display: block;
-								margin-left: auto;
-							}
-				.final_line {
-					background-color: #49AA3C;
-					height: 6px;	
-				}
-		
-
-		@media only screen and (max-device-width: 480px) {
-			a[href^="tel"], a[href^="sms"] {
-						text-decoration: none;
-						color: black; /* or whatever your want */
-						pointer-events: none;
-						cursor: default;
-					}
-			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-						text-decoration: default;
-						color: orange !important; /* or whatever your want */
-						pointer-events: auto;
-						cursor: default;
-					}
-		}
-		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-			a[href^="tel"], a[href^="sms"] {
-						text-decoration: none;
-						color: blue;
-						pointer-events: none;
-						cursor: default;
-					}
-			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-						text-decoration: default;
-						color: orange !important;
-						pointer-events: auto;
-						cursor: default;
-					}
-		}
-		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-			/* Put your iPhone 4g styles in here */
-		}
-		@media only screen and (-webkit-device-pixel-ratio:.75){
-			/* Put CSS for low density (ldpi) Android layouts in here */
-		}
-		@media only screen and (-webkit-device-pixel-ratio:1){
-			/* Put CSS for medium density (mdpi) Android layouts in here */
-		}
-		@media only screen and (-webkit-device-pixel-ratio:1.5){
-			/* Put CSS for high density (hdpi) Android layouts in here */
-		}
 	</style>
 </head>
 <body>
@@ -371,11 +310,10 @@
 										</table>
 								</tr>
 								<tr>
-									<td class="">
-										<img src="btn_more.png" alt="footer" />
+									<td class="body__btn_more">
+										<a href="#"><img src="btn_more.png" alt="footer" /></a>
 									</td>
 								</tr>
-
 							</table>
 						</td>
 					</tr>
